@@ -17,4 +17,38 @@ In simulating a TCP connection, the ability to drop packets by simply not sendin
 &emsp;&emsp;To run the server:  
 &emsp;&emsp;&emsp;*linux> ./UDPEchoServer <port> [<DROP 1> <DROP 2> ...]*  
 &emsp;&emsp;&emsp;&emsp;port - The port on which this server should listen.  
-&emsp;&emsp;&emsp;&emsp;DROP n - A packet to be dropped  
+&emsp;&emsp;&emsp;&emsp;DROP n - A packet to be dropped.  
+
+**Example Usage**
+
+Server:  
+&emsp;&emsp;*linux> ./UDPEchoServer 12345 1 2 3 4 5*  
+&emsp;&emsp;*Handling client 127.0.0.1*  
+
+Client:
+&emsp;&emsp;*linux> ./UDPEchoClient 127.0.0.1 12345*  
+&emsp;&emsp;*SEND PACKET 0*  
+&emsp;&emsp;*SEND PACKET 1*  
+&emsp;&emsp;*SEND PACKET 2*  
+&emsp;&emsp;*SEND PACKET 3*  
+&emsp;&emsp;*-------- RECEIVE ACK 0*  
+&emsp;&emsp;*SEND PACKET 4*  
+&emsp;&emsp;*SEND PACKET 1*  
+&emsp;&emsp;*SEND PACKET 2*  
+&emsp;&emsp;*SEND PACKET 3*  
+&emsp;&emsp;*SEND PACKET 4*  
+&emsp;&emsp;*SEND PACKET 5*  
+&emsp;&emsp;*-------- RECEIVE ACK 1*  
+&emsp;&emsp;*-------- RECEIVE ACK 2*  
+&emsp;&emsp;*-------- RECEIVE ACK 3*  
+&emsp;&emsp;*-------- RECEIVE ACK 4*  
+&emsp;&emsp;*SEND PACKET 5*  
+&emsp;&emsp;*SEND PACKET 6*  
+&emsp;&emsp;*SEND PACKET 7*  
+&emsp;&emsp;*SEND PACKET 8*  
+&emsp;&emsp;*SEND PACKET 9*  
+&emsp;&emsp;*-------- RECEIVE ACK 5*  
+&emsp;&emsp;*-------- RECEIVE ACK 6*  
+&emsp;&emsp;*-------- RECEIVE ACK 7*  
+&emsp;&emsp;*-------- RECEIVE ACK 8*  
+&emsp;&emsp;*-------- RECEIVE ACK 9*  
