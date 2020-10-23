@@ -17,13 +17,3 @@ Running
 Limitations:
     Currently if the server is specified to drop numbered packets, then the client may report
     that it is trying to send packets with sequence numbers outside of the expected range.
-
-    I'm sure that if I did not have less than 20 minutes to submit this assignment, this could have been
-    easily remedied with additional logic that would "roll the window back", so I may just need to
-    carefully consider what happens when a packet times out, and adjust the "base" and "last_sent"
-    variables accordingly.
-
-    I also currently do not have a Makefile included with this project. This was one of the last things I
-    wanted to do, but I decided to focus on getting the program as accurate as possible before creating
-    a Makefile. I have made Makefiles before, so I know it would be super easy to make one for this project,
-    but I am less than 10 minutes away from the deadline.
