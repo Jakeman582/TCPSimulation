@@ -11,11 +11,10 @@ In simulating a TCP connection, the ability to drop packets by simply not sendin
 
 **Running**  
 &emsp;&emsp;To run the client:  
-&emsp;&emsp;&emsp;*linux> ./UDPEchoClient <ip address> <port>*
-&emsp;&emsp;&emsp;&emsp;ip address - IP address of the machine running the server.
-&emsp;&emsp;&emsp;&emsp;port - The port on which the server is listening.
+&emsp;&emsp;&emsp;*linux> ./UDPEchoClient <ip address> <port>*  
+&emsp;&emsp;&emsp;&emsp;ip address - IP address of the machine running the server.  
+&emsp;&emsp;&emsp;&emsp;port - The port on which the server is listening.  
 &emsp;&emsp;To run the server:  
 &emsp;&emsp;&emsp;*linux> ./UDPEchoServer <port> [<DROP 1> <DROP 2> ...]*  
-&emsp;&emsp;&emsp;&emsp;port - The port on which this server should listen.
-&emsp;&emsp;&emsp;&emsp;DROP n - A packet to be dropped
-
+&emsp;&emsp;&emsp;&emsp;port - The port on which this server should listen.  
+&emsp;&emsp;&emsp;&emsp;DROP n - A packet to be dropped  
