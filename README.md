@@ -25,7 +25,7 @@ Server:
 &emsp;&emsp;*linux> ./UDPEchoServer 12345 1 2 3 4 5*  
 &emsp;&emsp;*Handling client 127.0.0.1*  
 
-Client:
+Client:  
 &emsp;&emsp;*linux> ./UDPEchoClient 127.0.0.1 12345*  
 &emsp;&emsp;*SEND PACKET 0*  
 &emsp;&emsp;*SEND PACKET 1*  
